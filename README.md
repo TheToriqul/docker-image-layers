@@ -41,10 +41,6 @@ graph TB
         G --> J[Registry]
         H --> J
     end
-
-    style Docker_Client fill:#e1f5fe
-    style Core_Functions fill:#f3e5f5
-    style Storage fill:#fff3e0
 ```
 
 ## 💻 Technical Stack
