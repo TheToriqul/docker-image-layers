@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  demo-ubuntu:
+    image: ubuntu:latest
+    command: sleep infinity
+    volumes:
+      - ./scripts:/scripts
+    working_dir: /scripts
+
+  demo-alpine:
+    image: alpine:latest
+    command: sleep infinity
+    volumes:
+      - ./scripts:/scripts
+    working_dir: /scripts
