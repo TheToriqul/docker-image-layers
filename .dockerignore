@@ -1,0 +1,9 @@
+.git
+.gitignore
+*.md
+LICENSE
+.DS_Store
+node_modules
+npm-debug.log
+Dockerfile.dev
+docker-compose.dev.yml
