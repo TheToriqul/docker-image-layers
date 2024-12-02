@@ -21,13 +21,30 @@ This project demonstrates advanced Docker image layer management and multi-archi
 ## 🏗️ Project Architecture
 
 ```mermaid
-graph LR
-  subgraph Architecture
-    A[Image Management] --> B[Layer Sharing]
-    B --> C[Storage Optimization]
-    A --> D[Multi-Architecture Support]
-    D --> E[Platform-Specific Deployments]
-  end
+graph TB
+    subgraph Docker_Client
+        A[Docker CLI] --> B[Image Operations]
+        B --> C[Layer Management]
+        B --> D[Multi-Arch Support]
+    end
+
+    subgraph Core_Functions
+        C --> E[Layer Analysis]
+        C --> F[Storage Optimization]
+        D --> G[Manifest Lists]
+        D --> H[Platform Selection]
+    end
+
+    subgraph Storage
+        E --> I[Layer Store]
+        F --> I
+        G --> J[Registry]
+        H --> J
+    end
+
+    style Docker_Client fill:#e1f5fe
+    style Core_Functions fill:#f3e5f5
+    style Storage fill:#fff3e0
 ```
 
 ## 💻 Technical Stack
